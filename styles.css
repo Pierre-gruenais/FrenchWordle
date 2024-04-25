@@ -3,7 +3,8 @@
 @import "tailwindcss/utilities";
 
 body {
-  margin:  100px;
+  margin:  200px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +20,7 @@ body {
     justify-content:center;
     align-items: center;
     height: 50vh;
+    
   
   }
 #keyboard {
@@ -53,4 +55,7 @@ body {
 
 .key:hover {
   background-color: #f0f0f0;
+}
+.hidden {
+  display: none;
 }

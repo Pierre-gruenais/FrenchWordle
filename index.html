@@ -12,17 +12,28 @@
     <title>FrenchWordle</title>
   </head>
 
-  <body >
-    
-    <div class="container mx-auto p-4">
-      <h1 class="text-3xl font-bold text-white mt-auto">FrenchWordle</h1>
-      <p class="text-lg text-white-700 mt-4">
-        Ceci est un exemple pour tester la compilation avec Tailwind CSS.
-      </p>
+  <body>
+    <div class="container mx-auto p-4 mt-8">
+      <h1 class="text-3xl font-bold text-white mt-8 ">FrenchWordle</h1>
+      
     </div>
-    
-    <div class="container">
-      <div id="keyboard">
+
+    <table class="table-auto border-collapse mt-8 ">
+      <thead>
+        <tr class="hidden">
+          <th class="border px-4 py-2"></th>
+          <th class="border px-4 py-2"></th>
+          <th class="border px-4 py-2"></th>
+          <th class="border px-4 py-2"></th>
+          <th class="border px-4 py-2"></th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+      
+    </table>
+
+    <div class="container mt-8">
+      <div id="keyboard" class="grid grid-cols-5 gap-1">
         <button class="key">A</button>
         <button class="key">B</button>
         <button class="key">C</button>
@@ -54,11 +65,31 @@
       </div>
     </div>
     <script>
-      document.querySelectorAll('.key').forEach(key => {
-  key.addEventListener('click', () => {
-    alert('Key clicked: ' + key.innerText);
-  });
-});
+      //generation des lignes de cellules
+      var nombreDeLignes = 6;
+      //selection du corps du tableau
+      var tbody = document.getElementById("table-body");
+
+      //boucle pour generer les lignes
+      for (var i = 0; i < nombreDeLignes; i++) {
+        var row = document.createElement("tr");
+        for (var j = 0; j < 5; j++) {
+          var cell = document.createElement("td");
+          cell.classList.add( "border",
+          "px-7","py-7","h-10","w-10","bg-gray-200","bg-transparent","border-blue-500","rounded-lg",);
+          // Ajoutez du contenu à vos cellules si nécessaire
+          // cell.textContent = 'Contenu';
+          row.appendChild(cell);
+        }
+        tbody.appendChild(row);
+      }
+
+      // ajouter des evenements aux boutons
+      document.querySelectorAll(".key").forEach((key) => {
+        key.addEventListener("click", () => {
+          alert("Key clicked: " + key.innerText);
+        });
+      });
     </script>
   </body>
 </html>
