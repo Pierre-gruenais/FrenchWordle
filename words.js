@@ -23,6 +23,24 @@
   "wagon",
   "zebre",
   "louve",
+  "bison",
+  "fêtez",
+  "fleur",
+  "quand",
+  "rêver",
+  "plage",
+  "pomme",
+  "riche",
+  "tasse",
+  "vaste",
+  "yacht",
+  "zéro",
+  "ligne",
+  "panne",
+  "vague",
+  "gros",
+  "niche",
+  "ombre"
 ];
 
 
