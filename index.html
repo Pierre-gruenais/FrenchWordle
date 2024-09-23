@@ -16,15 +16,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
       }
       .cell {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
       }
       #game-board {
@@ -39,17 +39,17 @@
   <body class="bg-green-100">
     <div class="w-full h-full flex items-center justify-center">
       <div
-        class="border-4 border-blue-500 p-10 rounded-lg max-w-xl mx-auto bg-white"
+        class="border-4 border-blue-500 p-4 rounded-lg max-w-xl mx-auto bg-white"
       >
         <header class="text-center">
-          <h1 class="text-3xl font-bold text-blue-600 mb-8">FrenchWordle</h1>
+          <h1 class="text-3xl font-bold text-blue-600 mb-2">FrenchWordle</h1>
         </header>
 
         <div class="game-container">
           <div id="game-board"></div>
           <!-- Tableau des cellules -->
 
-         <div class="grid grid-cols-5 gap-2 mb-6" id="game-board">
+         <div class="grid grid-cols-5 gap-2 mb-0" id="game-board">
 
             <!-- Les cellules seront générées dynamiquement par JavaScript -->
           </div>
@@ -57,100 +57,45 @@
 
      
         <!-- Clavier -->
-        <div class="grid grid-cols-5 gap-2 justify-center">
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            A
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            B
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            C
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            D
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            E
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            F
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            G
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            H
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            I
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            J
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            K
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            L
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            M
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            N
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            O
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            P
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            Q
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            R
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            S
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            T
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            U
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            V
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            W
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            X
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            Y
-          </button>
-          <button class="key bg-gray-300 hover:bg-gray-400 p-2 rounded">
-            Z
-          </button>
-          <button
-            class="key bg-gray-300 hover:bg-gray-400 p-2 rounded col-span-2"
-            id="enter-key"
-          >
-            enter
-          </button>
-          <button
-            class="key bg-gray-300 hover:bg-gray-400 p-2 rounded col-span-2"
-            id="delete-key"
-          >
-            delete
-          </button>
-        </div>
-      </div>
-    </div>
+        <!-- Première ligne : 10 touches -->
+<div class="grid grid-cols-10 gap-1 mt-0">
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">A</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">Z</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">E</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">R</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">T</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">Y</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">U</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">I</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">O</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">P</button>
+</div>
+
+<!-- Deuxième ligne : 9 touches -->
+<div class="grid grid-cols-9 gap-1 mt-1">
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">Q</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">S</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">D</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">F</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">G</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">H</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">J</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">K</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">L</button>
+</div>
+
+<!-- Troisième ligne : 9 touches avec Enter et Delete ajustés à la taille de leur texte -->
+<div class="grid grid-cols-9 gap-1 mt-1">
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">M</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">W</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">X</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">C</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">V</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">B</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">N</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">Enter</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">&larr;</button>
+</div>
     <script>
       var listeMots = [
         "avion",
