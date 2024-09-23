@@ -1,6 +1,7 @@
 # FrenchWordle
 
-FrenchWordle est une adaptation en français du célèbre jeu de devinettes de mots Wordle. Ce projet offre une expérience de jeu interactive où les joueurs tentent de deviner un mot de cinq lettres en français en six essais ou moins.
+FrenchWordle est une adaptation en français du célèbre jeu de devinettes de mots Wordle propriété du NYTimes. 
+Ce projet codé dans un objectif d'entrainement personnel offre une expérience de jeu interactive où les joueurs doivent tenter de deviner un mot de cinq lettres en français en six essais ou moins.
 
 ## Caractéristiques
 
@@ -35,7 +36,7 @@ Les contributions sont les bienvenues ! N'hésitez pas à forker le projet, cré
 
 ## Licence
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+Le jeu Wordle est sous licence du New York Times (NYTimes)
 
 ---
 
