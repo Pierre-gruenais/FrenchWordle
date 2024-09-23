@@ -46,7 +46,7 @@
         </header>
 
         <div class="game-container">
-          <div id="game-board"></div>
+          <div id="game-board class= grid grid-cols-5 gap-1 mb-1 "></div>
           <!-- Tableau des cellules -->
 
          <div class="grid grid-cols-5 gap-2 mb-0" id="game-board">
@@ -94,34 +94,12 @@
   <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">B</button>
   <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">N</button>
   <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">Enter</button>
-  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">&larr;</button>
+  <button class="key bg-gray-300 hover:bg-gray-400 p-1 rounded">←</button>
 </div>
-    <script>
-      var listeMots = [
-        "avion",
-        "belle",
-        "chien",
-        "droit",
-        "eclat",
-        "forme",
-        "givre",
-        "havre",
-        "ideal",
-        "jouer",
-        "lourd",
-        "mains",
-        "noyer",
-        "ombre",
-        "porte",
-        "quite",
-        "rouge",
-        "sable",
-        "table",
-        "usure",
-        "vivre",
-        "wagon",
-        "zebre",
-      ];
+    
+       
+      <script src="words.js"></script>
+      <script>
       var motCorrect;
       var ligneActuelle = 0;
       var colonneActuelle = 0;
@@ -195,7 +173,7 @@
       function handleVirtualKeyboardClick(letter){
         if (letter === "enter"){
           verifierMot();
-        }else if (letter === "delete"){
+        }else if (letter === "←"){
           effacerCaractere();
         }else if (letter.length === 1 && letter >= "a" && letter <= "z"){
           updateCell(letter.toUpperCase());
