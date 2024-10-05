@@ -14,7 +14,7 @@ Ce projet codé dans un objectif d'entrainement personnel offre une expérience 
 ## Technologies utilisées
 
 - HTML5
-- CSS3 (avec Tailwind CSS pour le styling)
+- Tailwind CSS 
 - JavaScript vanilla pour la logique du jeu
 
 ## Comment jouer
